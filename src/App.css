@@ -22,14 +22,15 @@
 }
 
 .image-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   pointer-events: none;
 }
 
 .top-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 1;
 }
 
@@ -87,3 +88,312 @@
 .slider-button:active {
   transform: translate(-50%, -50%) scale(0.95);
 }
+
+.bottom-buttons {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.image-button {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.image-button:hover {
+  background: transparent;
+  border: none;
+  transform: scale(1.1);
+}
+
+.image-button:active {
+  transform: scale(0.95);
+}
+
+.left-button {
+  bottom: calc(30vw);
+  left: calc(9vw);
+  transform: translateY(50%);
+}
+
+.right-button {
+  bottom: calc(25vw);
+  right: calc(7vw);
+  transform: translateY(50%);
+}
+
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, rgba(80, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.95) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease;
+  backdrop-filter: blur(5px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dialog-box {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a0505 50%, #0a0a0a 100%);
+  padding: 50px 40px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 450px;
+  border: 3px solid rgba(200, 0, 0, 0.5);
+  box-shadow: 
+    0 0 30px rgba(220, 20, 60, 0.6),
+    0 0 60px rgba(139, 0, 0, 0.4),
+    inset 0 0 50px rgba(0, 0, 0, 0.8);
+  animation: slideUp 0.5s ease, glowPulse 2s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.dialog-box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(220, 20, 60, 0.1) 0%, transparent 70%);
+  animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 30px rgba(220, 20, 60, 0.6),
+      0 0 60px rgba(139, 0, 0, 0.4),
+      inset 0 0 50px rgba(0, 0, 0, 0.8);
+    border-color: rgba(200, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 
+      0 0 50px rgba(220, 20, 60, 0.9),
+      0 0 100px rgba(139, 0, 0, 0.6),
+      inset 0 0 60px rgba(0, 0, 0, 0.9);
+    border-color: rgba(220, 20, 60, 0.8);
+  }
+}
+
+.dialog-box h2 {
+  color: #ff4444;
+  font-size: 32px;
+  margin: 0 0 20px 0;
+  text-shadow: 
+    0 0 10px rgba(255, 68, 68, 0.8),
+    0 0 20px rgba(220, 20, 60, 0.6),
+    0 0 30px rgba(139, 0, 0, 0.4);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: textFlicker 3s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes textFlicker {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px rgba(255, 68, 68, 0.8),
+      0 0 20px rgba(220, 20, 60, 0.6),
+      0 0 30px rgba(139, 0, 0, 0.4);
+  }
+  50% {
+    text-shadow: 
+      0 0 20px rgba(255, 68, 68, 1),
+      0 0 40px rgba(220, 20, 60, 0.9),
+      0 0 60px rgba(139, 0, 0, 0.7);
+  }
+}
+
+.dialog-box p {
+  color: rgba(255, 200, 200, 0.9);
+  font-size: 18px;
+  margin: 0 0 35px 0;
+  line-height: 1.8;
+  text-shadow: 0 2px 10px rgba(139, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.dialog-close-btn {
+  padding: 14px 45px;
+  font-size: 15px;
+  font-weight: 700;
+  border: 2px solid rgba(200, 0, 0, 0.6);
+  background: linear-gradient(135deg, rgba(80, 0, 0, 0.8) 0%, rgba(139, 0, 0, 0.6) 100%);
+  color: #ff6666;
+  border-radius: 5px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 
+    0 0 20px rgba(220, 20, 60, 0.4),
+    inset 0 0 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.dialog-close-btn:hover {
+  background: linear-gradient(135deg, rgba(139, 0, 0, 0.9) 0%, rgba(180, 20, 20, 0.8) 100%);
+  border-color: rgba(220, 20, 60, 0.9);
+  color: #ffaaaa;
+  transform: scale(1.05);
+  box-shadow: 
+    0 0 40px rgba(220, 20, 60, 0.8),
+    0 0 60px rgba(139, 0, 0, 0.6),
+    inset 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.dialog-close-btn:active {
+  transform: scale(0.98);
+}
+
+.code-input {
+  width: 100%;
+  max-width: 350px;
+  padding: 18px 25px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Courier New', monospace;
+  background: linear-gradient(135deg, rgba(20, 0, 0, 0.9) 0%, rgba(40, 0, 0, 0.8) 100%);
+  border: 2px solid rgba(200, 0, 0, 0.6);
+  border-radius: 8px;
+  color: #ff8888;
+  text-align: center;
+  margin: 25px auto;
+  display: block;
+  transition: all 0.4s ease;
+  box-shadow: 
+    0 0 25px rgba(220, 20, 60, 0.4),
+    inset 0 0 20px rgba(0, 0, 0, 0.9),
+    inset 0 2px 5px rgba(255, 50, 50, 0.1);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+.code-input:focus {
+  outline: none;
+  border-color: rgba(220, 20, 60, 1);
+  background: linear-gradient(135deg, rgba(30, 0, 0, 0.95) 0%, rgba(50, 0, 0, 0.9) 100%);
+  color: #ffaaaa;
+  box-shadow: 
+    0 0 40px rgba(220, 20, 60, 0.8),
+    0 0 60px rgba(255, 50, 50, 0.5),
+    inset 0 0 25px rgba(0, 0, 0, 1),
+    inset 0 2px 8px rgba(255, 50, 50, 0.2);
+  transform: scale(1.02);
+  animation: inputGlow 2s ease-in-out infinite;
+}
+
+@keyframes inputGlow {
+  0%, 100% {
+    box-shadow: 
+      0 0 40px rgba(220, 20, 60, 0.8),
+      0 0 60px rgba(255, 50, 50, 0.5),
+      inset 0 0 25px rgba(0, 0, 0, 1),
+      inset 0 2px 8px rgba(255, 50, 50, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 0 50px rgba(220, 20, 60, 1),
+      0 0 80px rgba(255, 50, 50, 0.7),
+      inset 0 0 30px rgba(0, 0, 0, 1),
+      inset 0 2px 10px rgba(255, 50, 50, 0.3);
+  }
+}
+
+.code-input::placeholder {
+  color: rgba(255, 100, 100, 0.4);
+  letter-spacing: 1px;
+  text-transform: none;
+  font-style: italic;
+}
+
+.code-input:hover:not(:focus) {
+  border-color: rgba(220, 20, 60, 0.8);
+  box-shadow: 
+    0 0 30px rgba(220, 20, 60, 0.5),
+    inset 0 0 22px rgba(0, 0, 0, 0.95);
+}
+
+.dialog-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.dialog-close-btn.secondary {
+  background: linear-gradient(135deg, rgba(40, 40, 40, 0.8) 0%, rgba(60, 60, 60, 0.6) 100%);
+  border-color: rgba(100, 100, 100, 0.6);
+  color: #aaa;
+}
+
+.dialog-close-btn.secondary:hover {
+  background: linear-gradient(135deg, rgba(60, 60, 60, 0.9) 0%, rgba(80, 80, 80, 0.8) 100%);
+  border-color: rgba(150, 150, 150, 0.8);
+  color: #fff;
+  box-shadow: 
+    0 0 20px rgba(100, 100, 100, 0.5),
+    inset 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
