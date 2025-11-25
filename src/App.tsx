@@ -74,7 +74,7 @@ function App() {
 
   const handleCodeSubmit = () => {
     if (accessCode === '6.62607004') {
-      alert('Congratulations!')
+      alert('Congratulations! You just saved the worlddd')
       closeDialog()
     } else {
       alert("Uh oh- , the world ended, we hope you're happy. hmph. You should've paid attention to the episode.")
