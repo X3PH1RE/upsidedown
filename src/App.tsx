@@ -104,7 +104,11 @@ function App() {
     if (accessCode === '6.62607004') {
       alert('Congratulations! You just saved the worlddd')
       closeDialog()
-    } else {
+    } else if (accessCode === '67'||'69') {
+      alert('Really?? Grow up already-')
+      closeDialog()
+    }
+    else {
       alert("Uh oh- , the world ended, we hope you're happy. hmph. You should've paid attention to the episode.")
       setAccessCode('')
     }
