@@ -38,8 +38,7 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 0;
-  transform: translateX(0);
+  transform: translateX(-50%);
   z-index: 10;
   cursor: col-resize;
   pointer-events: none;
@@ -50,17 +49,17 @@
   top: 0;
   bottom: 0;
   left: 0;
-  width: 4px;
+  width: 2px;
   background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transform: translateX(-8px);
+  transform: translateX(-1px);
 }
 
 .slider-button {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 0;
-  transform: translate(calc(-50% - 6px), -50%);
+  transform: translate(-50%, -50%);
   width: 48px;
   height: 48px;
   background-color: white;
@@ -76,9 +75,9 @@
 }
 
 .slider-button:hover {
-  transform: translate(calc(-50% - 8px), -50%) scale(1.1);
+  transform: translate(-50%, -50%) scale(1.1);
 }
 
 .slider-button:active {
-  transform: translate(calc(-50% - 8px), -50%) scale(0.95);
+  transform: translate(-50%, -50%) scale(0.95);
 }

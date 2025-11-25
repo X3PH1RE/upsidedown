@@ -17,20 +17,16 @@ function App() {
   }
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!isDragging || !containerRef.current) return
+    if (!isDragging) return
 
-    const rect = containerRef.current.getBoundingClientRect()
-    const x = e.clientX - rect.left
-    const percentage = (x / rect.width) * 100
+    const percentage = (e.clientX / window.innerWidth) * 100
     setSliderPosition(Math.max(0, Math.min(100, percentage)))
   }
 
   const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-    if (!isDragging || !containerRef.current) return
+    if (!isDragging) return
 
-    const rect = containerRef.current.getBoundingClientRect()
-    const x = e.touches[0].clientX - rect.left
-    const percentage = (x / rect.width) * 100
+    const percentage = (e.touches[0].clientX / window.innerWidth) * 100
     setSliderPosition(Math.max(0, Math.min(100, percentage)))
   }
 
