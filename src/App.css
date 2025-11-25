@@ -13,6 +13,12 @@
   overflow-y: auto;
   cursor: col-resize;
   user-select: none;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.slider-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 .image-wrapper {
@@ -48,18 +54,18 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
-  width: px;
+  left: 50%;
+  width: 3px;
   background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transform: translateX(-10px);
+  transform: translateX(-50%);
 }
 
 .slider-button {
   position: absolute;
   top: 50%;
-  left: 0;
-  transform: translate(-65%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 48px;
   height: 48px;
   background-color: white;
@@ -75,9 +81,9 @@
 }
 
 .slider-button:hover {
-  transform: translate(-65%, -50%) scale(1.1);
+  transform: translate(-50%, -50%) scale(1.1);
 }
 
 .slider-button:active {
-  transform: translate(-65%, -50%) scale(0.95);
+  transform: translate(-50%, -50%) scale(0.95);
 }
