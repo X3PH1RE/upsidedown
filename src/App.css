@@ -642,16 +642,16 @@
 
 @media (max-width: 768px) {
   .faq-section {
-    top: calc(330vw);
+    top: calc(370vw);
   }
 
   .faq-title {
-    font-size: calc(4vw + 18px);
+    font-size: calc(4vw + 16px);
   }
 
   .faq-question {
     font-size: calc(1vw + 12px);
-    padding: calc(1.5vw + 10px) calc(2vw + 12px);
+    padding: calc(1.5vw + 6px) calc(2vw + 12px);
   }
 
   .faq-icon {
@@ -671,9 +671,24 @@
     transform: scale(0.9);
   }
 
-  .devfolio-logo-container,
+  .devfolio-logo-container {
+    bottom: calc(215vw);
+    left: calc(50% - 34vw);
+    padding: calc(2vw + 10px) calc(3vw + 15px);
+    scale: 0.6;
+  }
+
   .ethindia-logo-container {
-    display: none;
+    bottom: calc(215vw);
+    right: calc(50% - 33vw);
+    padding: calc(2vw + 10px) calc(3vw + 15px);
+    scale: 0.6;
+  }
+
+  .devfolio-logo,
+  .ethindia-logo {
+    height: calc(4vw + 25px);
+    max-height: 45px;
   }
 
   .left-button {
