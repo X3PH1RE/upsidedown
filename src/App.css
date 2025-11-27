@@ -445,7 +445,7 @@
 
 .faq-section {
   position: absolute;
-  bottom: calc(37vw);
+  top: calc(160vw);
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
@@ -515,23 +515,134 @@
   color: rgba(255, 200, 200, 0.9);
   font-size: calc(0.8vw + 7px);
   line-height: 1.6;
-  animation: fadeIn 0.3s ease;
+  animation: fadeInDown 0.3s ease forwards;
+  overflow: hidden;
 }
 
-@keyframes fadeIn {
+@keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translateY(-10px);
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    max-height: 500px;
+    padding-top: 0;
+    padding-bottom: calc(0.8vw + 6px);
+  }
+}
+
+.devfolio-button-container {
+  position: absolute;
+  bottom: calc(27vw);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+  z-index: 100;
+  padding: calc(1vw + 10px);
+}
+
+.devfolio-button-container .apply-button {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.devfolio-button-container .apply-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.7);
+}
+
+.devfolio-logo-container {
+  position: absolute;
+  bottom: calc(85vw);
+  left: calc(50% - 13vw);
+  transform: translateX(-50%);
+  pointer-events: auto;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  padding: calc(0.8vw + 12px) calc(1.5vw + 20px);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ethindia-logo-container {
+  position: absolute;
+  bottom: calc(85vw);
+  right: calc(50% - 12vw);
+  transform: translateX(50%);
+  pointer-events: auto;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  padding: calc(0.8vw + 12px) calc(1.5vw + 20px);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.devfolio-logo-container a,
+.ethindia-logo-container a {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.devfolio-logo,
+.ethindia-logo {
+  height: calc(2vw + 30px);
+  width: auto;
+  max-height: 50px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.devfolio-logo-container:hover,
+.ethindia-logo-container:hover {
+  transform: translateX(-50%) scale(1.05);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+.ethindia-logo-container:hover {
+  transform: translateX(50%) scale(1.05);
+}
+
+@media (max-width: 1200px) {
+  .devfolio-logo,
+  .ethindia-logo {
+    height: calc(1.5vw + 25px);
+    max-height: 40px;
+  }
+
+  .devfolio-logo-container,
+  .ethindia-logo-container {
+    padding: calc(0.6vw + 10px) calc(1.2vw + 15px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .devfolio-logo,
+  .ethindia-logo {
+    height: calc(1.2vw + 20px);
+    max-height: 35px;
+  }
+
+  .devfolio-logo-container,
+  .ethindia-logo-container {
+    padding: calc(0.5vw + 8px) calc(1vw + 12px);
   }
 }
 
 @media (max-width: 768px) {
   .faq-section {
-    bottom: calc(125vw);
+    top: calc(330vw);
   }
 
   .faq-title {
@@ -549,6 +660,20 @@
 
   .faq-answer {
     font-size: calc(1.8vw + 10px);
+  }
+
+  .devfolio-button-container {
+    bottom: calc(107vw);
+    padding: calc(2vw + 10px);
+  }
+
+  .devfolio-button-container .apply-button {
+    transform: scale(0.9);
+  }
+
+  .devfolio-logo-container,
+  .ethindia-logo-container {
+    display: none;
   }
 
   .left-button {

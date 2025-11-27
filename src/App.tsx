@@ -28,6 +28,19 @@ function App() {
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
+  // Load Devfolio SDK
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, [])
+
   const faqs = [
     {
       question: "What is the hackathon theme?",
@@ -180,6 +193,38 @@ function App() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Devfolio Apply Button */}
+        <div className="devfolio-button-container">
+          <div 
+            className="apply-button" 
+            data-hackathon-slug="upside-down-hackathon" 
+            data-button-theme="dark"
+            style={{ height: '44px', width: '312px', margin: '0 auto' }}
+          ></div>
+        </div>
+
+        {/* Devfolio Logo */}
+        <div className="devfolio-logo-container">
+          <a href="https://devfolio.co/" target="_blank" rel="noopener noreferrer">
+            <img 
+              src="/Devfolio_Logo-Black.svg" 
+              alt="DEVFOLIO LOGO" 
+              className="devfolio-logo"
+            />
+          </a>
+        </div>
+
+        {/* ETHIndia Logo */}
+        <div className="ethindia-logo-container">
+          <a href="https://ethindia.co/" target="_blank" rel="noopener noreferrer">
+            <img 
+              src="/ethindia-dark.svg" 
+              alt="ETHINDIA LOGO" 
+              className="ethindia-logo"
+            />
+          </a>
         </div>
 
         {/* Social Media Icons */}
