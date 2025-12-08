@@ -445,7 +445,7 @@
 
 .faq-section {
   position: absolute;
-  top: calc(160vw);
+  top: calc(145vw);
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
@@ -534,115 +534,83 @@
   }
 }
 
-.devfolio-button-container {
+.register-button-container {
   position: absolute;
-  bottom: calc(27vw);
-  left: 50%;
+  top: calc(40vw);
+  right: 10%;
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
   pointer-events: auto;
   z-index: 100;
-  padding: calc(1vw + 10px);
 }
 
-.devfolio-button-container .apply-button {
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease;
-}
-
-.devfolio-button-container .apply-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.7);
-}
-
-.devfolio-logo-container {
-  position: absolute;
-  bottom: calc(85vw);
-  left: calc(50% - 13vw);
-  transform: translateX(-50%);
-  pointer-events: auto;
-  z-index: 100;
-  background: rgba(255, 255, 255, 0.95);
-  padding: calc(0.8vw + 12px) calc(1.5vw + 20px);
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.ethindia-logo-container {
-  position: absolute;
-  bottom: calc(85vw);
-  right: calc(50% - 12vw);
-  transform: translateX(50%);
-  pointer-events: auto;
-  z-index: 100;
-  background: rgba(255, 255, 255, 0.95);
-  padding: calc(0.8vw + 12px) calc(1.5vw + 20px);
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.devfolio-logo-container a,
-.ethindia-logo-container a {
-  display: block;
+.register-button {
+  padding: calc(0.8vw + 10px) calc(2vw + 28px);
+  font-size: calc(0.9vw + 13px);
+  font-weight: 600;
+  background: rgba(20, 0, 0, 0.7);
+  color: #ff6666;
+  scale: 0.8;
+  border: 1px solid rgba(255, 80, 80, 0.4);
+  border-radius: 6px;
   text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
   cursor: pointer;
-}
-
-.devfolio-logo,
-.ethindia-logo {
-  height: calc(2vw + 30px);
-  width: auto;
-  max-height: 50px;
-  object-fit: contain;
   transition: all 0.3s ease;
-  display: block;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
 }
 
-.devfolio-logo-container:hover,
-.ethindia-logo-container:hover {
-  transform: translateX(-50%) scale(1.05);
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+.register-button:hover {
+  background: rgba(40, 0, 0, 0.85);
+  color: #ff8888;
+  border-color: rgba(255, 80, 80, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 80, 80, 0.3);
 }
 
-.ethindia-logo-container:hover {
-  transform: translateX(50%) scale(1.05);
+.register-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 1200px) {
-  .devfolio-logo,
-  .ethindia-logo {
-    height: calc(1.5vw + 25px);
-    max-height: 40px;
-  }
-
-  .devfolio-logo-container,
-  .ethindia-logo-container {
-    padding: calc(0.6vw + 10px) calc(1.2vw + 15px);
+  .register-button-container {
+    right: 7%;
   }
 }
 
 @media (max-width: 1024px) {
-  .devfolio-logo,
-  .ethindia-logo {
-    height: calc(1.2vw + 20px);
-    max-height: 35px;
+  .register-button-container {
+    right: 6%;
   }
+}
 
-  .devfolio-logo-container,
-  .ethindia-logo-container {
-    padding: calc(0.5vw + 8px) calc(1vw + 12px);
+@media (max-width: 900px) {
+  .register-button-container {
+    right: 4%;
   }
 }
 
 @media (max-width: 768px) {
+  .register-button-container {
+    top: calc(102vw);
+    left: 78%;
+    right: auto;
+  }
+
+  .register-button {
+    font-size: calc(1vw + 7px);
+    padding: calc(1vw + 7px) calc(2vw + 18px);
+    scale: 1.0;
+  }
+
   .faq-section {
-    top: calc(370vw);
+    top: calc(340vw);
   }
 
   .faq-title {
@@ -660,35 +628,6 @@
 
   .faq-answer {
     font-size: calc(1.8vw + 10px);
-  }
-
-  .devfolio-button-container {
-    bottom: calc(107vw);
-    padding: calc(2vw + 10px);
-  }
-
-  .devfolio-button-container .apply-button {
-    transform: scale(0.9);
-  }
-
-  .devfolio-logo-container {
-    bottom: calc(215vw);
-    left: calc(50% - 34vw);
-    padding: calc(2vw + 10px) calc(3vw + 15px);
-    scale: 0.6;
-  }
-
-  .ethindia-logo-container {
-    bottom: calc(215vw);
-    right: calc(50% - 33vw);
-    padding: calc(2vw + 10px) calc(3vw + 15px);
-    scale: 0.6;
-  }
-
-  .devfolio-logo,
-  .ethindia-logo {
-    height: calc(4vw + 25px);
-    max-height: 45px;
   }
 
   .left-button {
