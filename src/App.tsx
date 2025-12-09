@@ -159,7 +159,7 @@ function App() {
 
         {/* Register Button */}
         <div className="register-button-container">
-          <a href="https://makeaton.in" target="_blank" rel="noopener noreferrer" className="register-button">
+          <a href="https://events.mlh.io/events/13447-upside-down-hacknight-make-a-ton-8-0?_gl=1*72t3br*_ga*MTkyMTAyODI4OS4xNzUwMjc1Mzk5*_ga_E5KT6TC4TK*czE3NjUyNjI2ODAkbzkkZzEkdDE3NjUyNjQxNjMkajU5JGwwJGgw" target="_blank" rel="noopener noreferrer" className="register-button">
             Register Now
           </a>
         </div>
