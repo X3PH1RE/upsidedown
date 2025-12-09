@@ -537,7 +537,7 @@
 .register-button-container {
   position: absolute;
   top: calc(40vw);
-  right:10%;
+  right:9%;
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
