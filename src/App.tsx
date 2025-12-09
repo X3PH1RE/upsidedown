@@ -158,7 +158,7 @@ function App() {
 
         {/* Register Button */}
         <div className="register-button-container">
-          <a href="makeaton.in" target="_blank" rel="noopener noreferrer" className="register-button">
+          <a href="https://makeaton.in" target="_blank" rel="noopener noreferrer" className="register-button">
             Register Now
           </a>
         </div>
