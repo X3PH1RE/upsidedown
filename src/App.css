@@ -537,7 +537,7 @@
 .register-button-container {
   position: absolute;
   top: calc(40vw);
-  right: 10%;
+  right:10%;
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
@@ -554,7 +554,7 @@
   color: #ff6666;
   scale: 0.8;
   border: 1px solid rgba(255, 80, 80, 0.4);
-  border-radius: 6px;
+  border-radius: 25px;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1.5px;
