@@ -5,6 +5,7 @@ import downImg from '../bg/down.png'
 import upsideMobileImg from '../bg/upside mobile.png'
 import downMobileImg from '../bg/down mobile.png'
 import audioFile from './audio.mp3'
+import { Analytics } from '@vercel/analytics/react'
 function App() {
   const [sliderPosition, setSliderPosition] = useState(50)
   const [isDragging, setIsDragging] = useState(false)
@@ -278,6 +279,7 @@ function App() {
       </div>
 
     </div>
+    <Analytics />
     </>
   )
 }
