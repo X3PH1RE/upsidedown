@@ -40,7 +40,7 @@ function App() {
     },
     {
       question: "Can I participate solo or do I need a team?",
-      answer: "You can participate either solo or in teams of up to 4 members."
+      answer: "You can participate in teams of 4 members. While registering make sure every member registers individually and put the same team name. Those who do not have a team of 4, will be paired during the event."
     },
     {
       question: "How to register for the Upside Down Hacknight",
