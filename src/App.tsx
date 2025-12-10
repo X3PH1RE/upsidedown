@@ -43,6 +43,15 @@ function App() {
       answer: "You can participate only in teams of 4 members. While registering make sure every member registers individually and put the same team name. Those who do not have a team of 4, will be paired during the event."
     },
     {
+      question: "How to register for the Upside Down Hacknight?",
+      answer: `1. Registrations are individual — everyone on your team has to sign up.
+2. Fill in your basic details.
+3. Add your team name.
+4. Drop your team lead's email.
+5. Fill in the rest of the form and hit submit. And voila, you're officially part of the event.
+See you in the Upside Down.`
+    },
+    {
       question: "What are the prizes?",
       answer: "Winners will receive Netflix Subscriptions, swags, and coffee to help you get through the Demogorgons! "
     },
