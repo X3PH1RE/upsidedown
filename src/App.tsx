@@ -168,8 +168,13 @@ See you in the Upside Down.`
 
         {/* Register Button */}
         <div className="register-button-container">
-          <a href="https://events.mlh.io/events/13447-upside-down-hacknight-make-a-ton-8-0?_gl=1*72t3br*_ga*MTkyMTAyODI4OS4xNzUwMjc1Mzk5*_ga_E5KT6TC4TK*czE3NjUyNjI2ODAkbzkkZzEkdDE3NjUyNjQxNjMkajU5JGwwJGgw" target="_blank" rel="noopener noreferrer" className="register-button">
-            Register Now
+          <a href="https://upsidedown-makeaton.devpost.com/project-gallery" target="_blank" rel="noopener noreferrer" className="register-button">
+            View Projects
+          </a>
+          <a href="https://photos.app.goo.gl/ctgo3M3sZUH6hzDF8" target="_blank" rel="noopener noreferrer" className="gallery-button">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M4 4h4v4H4V4zm6 0h4v4h-4V4zm6 0h4v4h-4V4zM4 10h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4zM4 16h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4z"/>
+            </svg>
           </a>
         </div>
 
